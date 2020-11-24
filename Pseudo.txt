@@ -1,0 +1,279 @@
+__int64 __userpurge start@<rax>(__int64 a1@<rbp>, __int64 a2, __int64 a3, __int64 a4, __int64 a5)
+{
+    __int64 v5; // r10@1
+    char* v6; // rsi@1
+    _BYTE* v7; // rdi@1
+    char v8; // dl@1
+    char v9; // al@2
+    signed int i; // ebx@2
+    unsigned __int8 v11; // cf@3
+    char v12; // dl@4
+    char v13; // tt@4
+    unsigned __int8 v14; // cf@6
+    char v15; // dl@7
+    char v16; // tt@7
+    __int64 v17; // rax@9
+    unsigned __int8 v18; // cf@9
+    char v19; // dl@10
+    char v20; // tt@10
+    unsigned __int8 v21; // cf@12
+    char v22; // dl@12
+    char v23; // dl@13
+    char v24; // tt@13
+    int v25; // eax@14
+    unsigned __int8 v26; // cf@14
+    char v27; // dl@14
+    char v28; // dl@15
+    char v29; // tt@15
+    int v30; // eax@16
+    unsigned __int8 v31; // cf@16
+    char v32; // dl@16
+    char v33; // dl@17
+    char v34; // tt@17
+    int v35; // eax@18
+    unsigned __int8 v36; // cf@18
+    char v37; // dl@19
+    char v38; // tt@19
+    int v39; // eax@20
+    signed int v40; // eax@23
+    unsigned __int8 v41; // cf@24
+    char v42; // dl@24
+    char v43; // dl@25
+    char v44; // tt@25
+    unsigned __int8 v45; // cf@26
+    char v46; // dl@27
+    char v47; // tt@27
+    int v48; // eax@29
+    unsigned __int64 v49; // rcx@30
+    unsigned __int8 v50; // cf@31
+    char v51; // dl@31
+    char v52; // dl@32
+    char v53; // tt@32
+    unsigned __int8 v54; // cf@33
+    char v55; // dl@34
+    char v56; // tt@34
+    __int64 v57; // rax@37
+    unsigned __int64 v58; // rcx@37
+    unsigned __int8 v59; // cf@38
+    char v60; // dl@38
+    char v61; // dl@39
+    char v62; // tt@39
+    unsigned __int8 v63; // cf@40
+    char v64; // dl@41
+    char v65; // tt@41
+    unsigned __int64 v66; // rcx@45
+    unsigned __int8 v67; // cf@49
+    unsigned __int64 v68; // rcx@50
+    __int64 v70; // [sp-8h] [bp-8h]@1
+    char* v72; // [sp+8h] [bp+8h]@1
+    int v73; // [sp+18h] [bp+18h]@0
+    _BYTE* v74; // [sp+18h] [bp+18h]@1
+
+    sub_5D21DF();
+    v70 = v5;
+    v6 = v72;
+    v7 = v74;
+    v8 = -128;
+LABEL_2:
+    v9 = *v6++;
+    *v7++ = v9;
+    for (i = 2; ; i = 1)
+    {
+        while (1)
+        {
+            while (1)
+            {
+                v11 = __CFADD__(v8, v8);
+                v8 *= 2;
+                if (!v8)
+                {
+                    v12 = *v6++;
+                    v13 = v11 + v12;
+                    v11 = __CFADD__(v11, v12) | __CFADD__(v12, v11 + v12);
+                    v8 = v12 + v13;
+                }
+                if (!v11)
+                    goto LABEL_2;
+                v14 = __CFADD__(v8, v8);
+                v8 *= 2;
+                if (!v8)
+                {
+                    v15 = *v6++;
+                    v16 = v14 + v15;
+                    v14 = __CFADD__(v14, v15) | __CFADD__(v15, v14 + v15);
+                    v8 = v15 + v16;
+                }
+                if (v14)
+                    break;
+                v40 = 1;
+                do
+                {
+                    v41 = __CFADD__(v8, v8);
+                    v42 = 2 * v8;
+                    if (!v42)
+                    {
+                        v43 = *v6++;
+                        v44 = v41 + v43;
+                        v41 = __CFADD__(v41, v43) | __CFADD__(v43, v41 + v43);
+                        v42 = v43 + v44;
+                    }
+                    v40 += v41 + v40;
+                    v45 = __CFADD__(v42, v42);
+                    v8 = 2 * v42;
+                    if (!v8)
+                    {
+                        v46 = *v6++;
+                        v47 = v45 + v46;
+                        v45 = __CFADD__(v45, v46) | __CFADD__(v46, v45 + v46);
+                        v8 = v46 + v47;
+                    }
+                } while (v45);
+                v48 = v40 - i;
+                i = 1;
+                if (v48)
+                {
+                    v57 = (unsigned int)((v48 - 1) << 8);
+                    LOBYTE(v57) = *v6++;
+                    a1 = (unsigned int)v57;
+                    LODWORD(v58) = 1;
+                    do
+                    {
+                        v59 = __CFADD__(v8, v8);
+                        v60 = 2 * v8;
+                        if (!v60)
+                        {
+                            v61 = *v6++;
+                            v62 = v59 + v61;
+                            v59 = __CFADD__(v59, v61) | __CFADD__(v61, v59 + v61);
+                            v60 = v61 + v62;
+                        }
+                        v58 = (unsigned int)v58 + v59 + (_DWORD)v58;
+                        v63 = __CFADD__(v60, v60);
+                        v8 = 2 * v60;
+                        if (!v8)
+                        {
+                            v64 = *v6++;
+                            v65 = v63 + v64;
+                            v63 = __CFADD__(v63, v64) | __CFADD__(v64, v63 + v64);
+                            v8 = v64 + v65;
+                        }
+                    } while (v63);
+                    if ((unsigned int)v57 >= 0x7D00)
+                    {
+                    LABEL_47:
+                        v58 = (unsigned int)(v58 + 2);
+                    LABEL_48:
+                        qmemcpy(v7, &v7[-v57], v58);
+                        v7 += v58;
+                    }
+                    else
+                    {
+                        if ((unsigned int)v57 < 0x500)
+                        {
+                            if ((unsigned int)v57 > 0x7F)
+                                goto LABEL_48;
+                            goto LABEL_47;
+                        }
+                        v66 = (unsigned int)(v58 + 1);
+                        qmemcpy(v7, &v7[-v57], v66);
+                        v7 += v66;
+                    }
+                }
+                else
+                {
+                    LODWORD(v49) = 1;
+                    do
+                    {
+                        v50 = __CFADD__(v8, v8);
+                        v51 = 2 * v8;
+                        if (!v51)
+                        {
+                            v52 = *v6++;
+                            v53 = v50 + v52;
+                            v50 = __CFADD__(v50, v52) | __CFADD__(v52, v50 + v52);
+                            v51 = v52 + v53;
+                        }
+                        v49 = (unsigned int)v49 + v50 + (_DWORD)v49;
+                        v54 = __CFADD__(v51, v51);
+                        v8 = 2 * v51;
+                        if (!v8)
+                        {
+                            v55 = *v6++;
+                            v56 = v54 + v55;
+                            v54 = __CFADD__(v54, v55) | __CFADD__(v55, v54 + v55);
+                            v8 = v55 + v56;
+                        }
+                    } while (v54);
+                    qmemcpy(v7, &v7[-a1], v49);
+                    v7 += v49;
+                }
+            }
+            v17 = 0i64;
+            v18 = __CFADD__(v8, v8);
+            v8 *= 2;
+            if (!v8)
+            {
+                v19 = *v6++;
+                v20 = v18 + v19;
+                v18 = __CFADD__(v18, v19) | __CFADD__(v19, v18 + v19);
+                v8 = v19 + v20;
+            }
+            if (!v18)
+                break;
+            v21 = __CFADD__(v8, v8);
+            v22 = 2 * v8;
+            if (!v22)
+            {
+                v23 = *v6++;
+                v24 = v21 + v23;
+                v21 = __CFADD__(v21, v23) | __CFADD__(v23, v21 + v23);
+                v22 = v23 + v24;
+            }
+            v25 = v21;
+            v26 = __CFADD__(v22, v22);
+            v27 = 2 * v22;
+            if (!v27)
+            {
+                v28 = *v6++;
+                v29 = v26 + v28;
+                v26 = __CFADD__(v26, v28) | __CFADD__(v28, v26 + v28);
+                v27 = v28 + v29;
+            }
+            v30 = v25 + v26 + v25;
+            v31 = __CFADD__(v27, v27);
+            v32 = 2 * v27;
+            if (!v32)
+            {
+                v33 = *v6++;
+                v34 = v31 + v33;
+                v31 = __CFADD__(v31, v33) | __CFADD__(v33, v31 + v33);
+                v32 = v33 + v34;
+            }
+            v35 = v30 + v31 + v30;
+            v36 = __CFADD__(v32, v32);
+            v8 = 2 * v32;
+            if (!v8)
+            {
+                v37 = *v6++;
+                v38 = v36 + v37;
+                v36 = __CFADD__(v36, v37) | __CFADD__(v37, v36 + v37);
+                v8 = v37 + v38;
+            }
+            v39 = v35 + v36 + v35;
+            if (v39)
+                LOBYTE(v39) = v7[-v39];
+            *v7++ = v39;
+            i = 2;
+        }
+        LOBYTE(v17) = *v6++;
+        v67 = v17 & 1;
+        LOBYTE(v17) = (unsigned __int8)v17 >> 1;
+        if (!(_BYTE)v17)
+            break;
+        v68 = (unsigned int)v67 + 2;
+        a1 = (unsigned int)v17;
+        qmemcpy(v7, &v7[-v17], v68);
+        v7 += v68;
+    }
+    return (unsigned int)((_DWORD)v7 - v73);
+}
